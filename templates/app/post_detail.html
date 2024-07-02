@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+
+{% block icon %}
+<link rel="icon" type="image/x-icon" href="https://mykaleidoscope.ru/x/uploads/posts/2022-10/1666792659_15-mykaleidoscope-ru-p-krasnie-kedi-naik-oboi-18.jpg">
+{% endblock %}
+
+
+{% block title %}
+    {{ post.title }}
+{% endblock title %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-8">
+            <h1>{{ post.title }}</h1>
+            <p class="text-muted">{{ post.date }} - @Ruslan</p>
+            <hr>
+            <p>
+                {{ post.description }}
+            </p>
+        </div>
+        
+        <div class="col-4 mt-5">
+            <div class="row gap-3 mb-3">
+                <div class="col-1">
+                    <a href="{% url 'post_update' %}" class="btn btn-success">
+                        <i class='bx bx-edit'></i>
+                    </a>
+                </div>
+                <div class="col-1">
+                    <a href="{% url 'post_delete' %}" class="btn btn-danger">
+                        <i class='bx bx-trash'></i>
+                    </a>
+                </div>
+            </div>
+            <img src="https://mykaleidoscope.ru/x/uploads/posts/2022-10/1666792659_15-mykaleidoscope-ru-p-krasnie-kedi-naik-oboi-18.jpg"
+            class="img-fluid" alt="">
+        </div>
+    </div>
+</div>
+{% endblock %}
