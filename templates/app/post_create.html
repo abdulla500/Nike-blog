@@ -6,20 +6,23 @@
 
             <div class="card-body">
                 <h3>Создать пост</h3>
-                <form action="">
+                <form action="" method="post" enctype="multipart/form-data">
+
+                    {% csrf_token %}
+
                     <div class="mb-3">
                         <label for="inputTitle">Заголовок</label>
-                        <input type="text" class="form-control" id="inputTitle">
+                        <input name="title" type="text" class="form-control" id="inputTitle">
                     </div>
                     <div class="mb-3">
                         <label for="inputImage">Изображение</label>
-                        <input type="file" class="form-control" id="inputImage">
+                        <input name="image" type="file" class="form-control" id="inputImage">
                     </div>
                     <div class="mb-3">
                         <label for="inputContent">Контент</label>
-                        <textarea name="" id="inputContent" class="form-control"></textarea>
+                        <textarea name="description" id="inputContent" class="form-control"></textarea>
                     </div>
-                    <button class="btn btn-danger">Создать</button>
+                    <button class="btn btn-danger" type="submit">Создать</button>
                 </form>
             </div>
 
