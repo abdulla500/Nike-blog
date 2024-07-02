@@ -12,15 +12,15 @@
 
                     <div class="mb-3">
                         <label for="inputTitle">Заголовок</label>
-                        <input name="title" type="text" class="form-control" id="inputTitle">
+                        {{ form.title }}
                     </div>
                     <div class="mb-3">
                         <label for="inputImage">Изображение</label>
-                        <input name="image" type="file" class="form-control" id="inputImage">
+                        {{ form.image }}
                     </div>
                     <div class="mb-3">
                         <label for="inputContent">Контент</label>
-                        <textarea name="description" id="inputContent" class="form-control"></textarea>
+                        {{ form.description }}
                     </div>
                     <button class="btn btn-danger" type="submit">Создать</button>
                 </form>
